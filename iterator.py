@@ -176,19 +176,19 @@ class BatchFromFilesMixin():
         self.data_format = data_format
         if self.color_mode == 'rgba':
             if self.data_format == 'channels_last':
-                self.image_shape = self.target_size + (4,)
+                self.image_shape = self.target_size 
             else:
-                self.image_shape = (4,) + self.target_size
+                self.image_shape = self.target_size
         elif self.color_mode == 'rgb':
             if self.data_format == 'channels_last':
-                self.image_shape = self.target_size + (3,)
+                self.image_shape = self.target_size 
             else:
-                self.image_shape = (3,) + self.target_size
+                self.image_shape = self.target_size
         else:
             if self.data_format == 'channels_last':
-                self.image_shape = self.target_size + (1,)
+                self.image_shape = self.target_size
             else:
-                self.image_shape = (1,) + self.target_size
+                self.image_shape = self.target_size
         self.save_to_dir = save_to_dir
         self.save_prefix = save_prefix
         self.save_format = save_format
